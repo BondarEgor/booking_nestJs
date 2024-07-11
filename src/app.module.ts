@@ -8,24 +8,16 @@ import { RoomsModule } from './rooms/rooms.module';
 import { BookingModule } from './booking/booking.module';
 import { PaymentModule } from './payment/payment.module';
 import { ReviewsModule } from './reviews/reviews.module';
+import { DatabaseModule } from './database/database.module'
 
 @Module({
   imports: [
-    TypeOrmModule.forRoot({
-      type: 'mysql',
-      host: 'localhost',
-      port: 3306,
-      username: 'root',
-      password: 'root',
-      database: 'test',
-      entities: []
-    }),
     UsersModule,
     HotelsModule,
     RoomsModule,
     BookingModule,
     PaymentModule,
-    ReviewsModule
+    ReviewsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
